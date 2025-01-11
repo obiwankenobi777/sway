@@ -22,7 +22,7 @@ set $term foot
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/arch/1.png fill
+output * bg /home/ian/downloads/wallpaper/art/47.png fill
 
 ### Input configuration
 input "type:keyboard" {
@@ -49,12 +49,6 @@ input "type:keyboard" {
 
     # Start pavucontrol
     bindsym $mod+n exec pavucontrol -t 3    
-
-    # Start gammastep
-    bindsym $mod+F6 exec gammastep -l -5.0892:-42.8019 -g 1.44:1.22:0.765
-
-    # Kill gammastep
-     bindsym $mod+F5 exec pkill gammastep
 
     # Kill focused window
     bindsym $mod+Shift+c kill
@@ -188,14 +182,20 @@ bindsym $mod+r mode "resize"
     bindsym $mod+F8 exec brightnessctl set 1%+
     bindsym $mod+F7 exec brightnessctl set 1%-
 
+    # Start gammastep
+    bindsym $mod+F6 exec gammastep -l -5.0892:-42.8019 -g 1.44:1.22:0.765
+
+    # Kill gammastep
+     bindsym $mod+F5 exec pkill gammastep
+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 #
 # Status Bar:
 #
 bar {
-    position bottom
-    font : hasklug nerd font black 10
+    position top 
+    font : hasklug nerd font black 9
 
     status_command ~/.config/sway/status
     
