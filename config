@@ -196,7 +196,8 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 bar {
-    position top 
+#    position bottom
+    position top
     font : hasklug nerd font black 9
 
     status_command ~/.config/sway/status
@@ -204,7 +205,7 @@ bar {
     colors {
         statusline #ffffff
         background #000000
-        inactive_workspace #000000 #000000 #0088cc
+        inactive_workspace #000000 #000000 #ffffff
 #        inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
