@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 #set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/arch/3.png fill
+output * bg /home/ian/downloads/wallpaper/arch/18.png fill
 
 ### Input configuration
 input "type:keyboard" {
@@ -50,7 +50,7 @@ input "type:keyboard" {
     bindsym $mod+e exec evince
 
     # Start pavucontrol
-    bindsym $mod+n exec pavucontrol -t 3    
+    bindsym $mod+n exec GTK_THEME=Adwaita:dark pavucontrol -t 3
 
     # Kill focused window
     bindsym $mod+Shift+c kill
