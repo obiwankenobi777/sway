@@ -47,7 +47,7 @@ input "type:keyboard" {
     bindsym $mod+s exec chromium
 
     # Start evince
-    bindsym $mod+e exec evince
+    bindsym $mod+e exec GTK_THEME=Adwaita:dark evince
 
     # Start pavucontrol
     bindsym $mod+n exec GTK_THEME=Adwaita:dark pavucontrol -t 3
