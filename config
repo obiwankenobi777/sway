@@ -20,19 +20,17 @@ set $right l
 set $term foot
 
 # Your preferred application launcher
-<<<<<<< HEAD
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 #set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/ian/downloads/wallpaper/arch/18.png fill
-=======
+
 #set $menu wofi --show drun
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/arch/1.png fit
->>>>>>> e2d298a (MY first Commit)
+output * bg /home/ian/downloads/wallpaper/arch/3.png fit
 
 ### Input configuration
 input "type:keyboard" {
@@ -206,11 +204,8 @@ bindsym $mod+r mode "resize"
 bar {
 #    position bottom
     position top
-<<<<<<< HEAD
     font : hasklug nerd font black 9
-=======
     font : hasklug nerd font mono black 9
->>>>>>> e2d298a (MY first Commit)
 
     status_command ~/.config/sway/status
     
