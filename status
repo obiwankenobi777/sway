@@ -2,7 +2,6 @@
 
 while true; do
     DATE=$(date +'%y/%m/%d %R')
-
     CPU_TEMP=$(sensors | grep -oP 'Package id 0:\s+\+\K[0-9.]+(?=°C)')
 
     # porcentagem wifi
