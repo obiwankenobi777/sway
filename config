@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 #set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/nature/12.png fill
+output * bg /home/ian/downloads/wallpaper/game/2.png fill
 
 #set $menu wofi --show drun
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
@@ -60,6 +60,9 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+p exec $menu
+
+    # swaylock
+    bindsym $mod+w exec swaylock
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
