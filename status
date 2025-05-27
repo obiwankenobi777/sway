@@ -1,6 +1,7 @@
 #!/bin/bash
 
 while true; do
+    #data
     DATE=$(date +'%y/%m/%d %R')
     CPU_TEMP=$(sensors | grep -oP 'Package id 0:\s+\+\K[0-9.]+(?=°C)')
 
@@ -9,9 +10,17 @@ while true; do
     WIFI_SSID=$(nmcli -t -f ACTIVE,SSID dev wifi | grep '^yes' | cut -d':' -f2)
     WIFI_SIGNAL=$(nmcli -t -f IN-USE,SIGNAL dev wifi | grep '^*' | cut -d':' -f2)
 
+    #bateria
     BATTERY=$(acpi -b | awk '{print $4 $5}' | sed 's/,/ /g' | sed 's/charging//')
 
-    echo "Temp: ${CPU_TEMP}C Wifi: $WIFI_SIGNAL% Bat: ${BATTERY} $DATE"
+    #porcentagem de ram
+    total=$(grep MemTotal /proc/meminfo | awk '{printf $2}')
+    available=$(grep MemAvailable /proc/meminfo | awk '{printf $2}')
+    used=$((total - available))
+    percent=$(awk -v used="$used" -v total="$total" 'BEGIN { printf "%.2f", (used/total)*100 }')
+
+    #show
+    echo "Temp: ${CPU_TEMP}C RAM: $percent% Wifi: $WIFI_SIGNAL% Bat: ${BATTERY} $DATE"
 
     sleep 1
 done
