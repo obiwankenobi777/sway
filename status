@@ -20,7 +20,7 @@ while true; do
     percent=$(awk -v used="$used" -v total="$total" 'BEGIN { printf "%.2f", (used/total)*100 }')
 
     #show
-    echo "Temp: ${CPU_TEMP}C RAM: $percent% Wifi: $WIFI_SIGNAL% Bat: ${BATTERY} $DATE"
+    echo "Temp: ${CPU_TEMP}C Mem: $percent% Wifi: $WIFI_SIGNAL% Bat: ${BATTERY} $DATE"
 
     sleep 1
 done
