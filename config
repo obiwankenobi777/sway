@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 #set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/pixel/12.png fill
+output * bg /home/ian/downloads/wallpaper/pixel/30.png fill
 
 #set $menu wofi --show drun
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
