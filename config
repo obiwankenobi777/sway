@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 #set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/pixel/30.png fill
+output * bg /home/ian/downloads/wallpaper/pixel/2.png fill
 
 #set $menu wofi --show drun
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
@@ -204,8 +204,8 @@ bindsym $mod+r mode "resize"
 bar {
 #    position bottom
     position top
-    font : hasklug nerd font black 10
-    font : hasklug nerd font mono black 10
+    font : hasklug nerd font black 11
+    font : hasklug nerd font mono black 11
 
     status_command ~/.config/sway/status
     
