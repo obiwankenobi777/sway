@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
 # set $menu wofi --show drun
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ian/downloads/wallpaper/cities/11.png fill
+output * bg /home/ian/downloads/wallpaper/arch/1.png fill
 
 #set $menu wofi --show drun
 set $menu dmenu_path | dmenu -c -l 11 -bw 7 | xargs swaymsg exec --
@@ -44,10 +44,11 @@ input "type:keyboard" {
     bindsym $mod+b exec "swaymsg bar bar-0 mode toggle"
 
     # Start brave 
-    bindsym $mod+a exec brave
+    bindsym $mod+a exec brave --ozone-platform=x11
+    # bindsym $mod+a exec brave
 
     # Start chromium
-    # bindsym $mod+s exec chromium
+    bindsym $mod+s exec  chromium --ozone-platform=x11
 
     # Start evince
     bindsym $mod+e exec GTK_THEME=Adwaita:dark evince
