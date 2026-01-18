@@ -45,7 +45,6 @@ input "type:keyboard" {
 
     # Start brave 
     bindsym $mod+a exec brave --ozone-platform=x11
-    # bindsym $mod+a exec brave
 
     # Start chromium
     bindsym $mod+s exec  chromium --ozone-platform=x11
